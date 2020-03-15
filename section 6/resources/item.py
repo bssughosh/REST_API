@@ -19,7 +19,7 @@ class Item(Resource):
             try:
                 return item.json()
             except:
-                return {'message': 'An Error Occured'}, 500
+                return {'message': 'An Error Occurred'}, 500
         return {'message': 'Item not found'}, 404
 
     def post(self, name):
@@ -31,7 +31,7 @@ class Item(Resource):
         try:
             item.insert()
         except:
-            return {'message': 'An Error Occured'}, 500
+            return {'message': 'An Error Occurred'}, 500
         return item.json(), 201
 
     def delete(self, name):
@@ -57,13 +57,13 @@ class Item(Resource):
             try:
                 updated_item.insert()
             except:
-                return {'message': 'An Error Occured'}, 500
+                return {'message': 'An Error Occurred'}, 500
         else:
 
             try:
                 updated_item.update()
             except:
-                return {'message': 'An Error Occured'}, 500
+                return {'message': 'An Error Occurred'}, 500
         return updated_item
 
 
