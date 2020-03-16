@@ -6,7 +6,7 @@ cursor = con.cursor()
 create_table = "CREATE TABLE IF NOT EXISTS users (id INTEGER PRIMARY KEY, username TEXT, password TEXT)"
 cursor.execute(create_table)
 
-create_table = "CREATE TABLE IF NOT EXISTS items (name TEXT PRIMARY KEY, price REAL)"
+create_table = "CREATE TABLE IF NOT EXISTS items (id INTEGER PRIMARY KEY, name TEXT, price REAL)"
 cursor.execute(create_table)
 
 # user = (1, 'sug', '12345')
